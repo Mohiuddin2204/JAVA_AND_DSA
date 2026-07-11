@@ -19,7 +19,7 @@ public class NextPermutation {
             }
         }
         if(ind==-1){
-            rev(a,0,a.length-1);
+            rev(a,0,a.length-1); return;
         }
         for(int i=a.length-1;i>ind;i--){
             if(a[i]>a[ind]){

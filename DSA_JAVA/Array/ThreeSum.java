@@ -32,7 +32,6 @@ public class ThreeSum {
                         k--;
                     }
                 }
-
             }
         }
         System.out.println(all);
