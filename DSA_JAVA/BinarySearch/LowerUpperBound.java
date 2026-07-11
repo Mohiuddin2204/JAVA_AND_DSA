@@ -41,14 +41,14 @@ public class LowerUpperBound {
             System.out.println("no lower bound");
         }
         else{
-            System.out.println("index : "+lb+" element : "+a[lb]);
+            System.out.println("LB index : "+lb+" element : "+a[lb]);
         }
         int ub=ub(a,k);
         if(ub==a.length){
-            System.out.println("no lower bound");
+            System.out.println("no upper bound");
         }
         else{
-            System.out.println("index : "+ub+" element : "+a[ub]);
+            System.out.println("UB index : "+ub+" element : "+a[ub]);
         }
     }
 }
