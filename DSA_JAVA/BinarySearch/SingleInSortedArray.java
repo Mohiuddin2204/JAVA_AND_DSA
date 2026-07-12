@@ -1,5 +1,5 @@
 package BinarySearch;
-
+//Every number repeats twice , one number repeats once
 public class SingleInSortedArray {
     //ARRAY CONTAINING 1 ELEMENT = RETURN IT
     //CHECK CARE FOR FIRST AND LAST ELEMENT IF AS SINGLE
