@@ -20,7 +20,7 @@ public class SmallestDivisor {
         return ans;
     }
     public static void main(String[] args) {
-        int[] a={1,2,5,9}; int t=6; int ans=1;
+        int[] a={1,2,5,9}; int t=6; int ans=max(a);
         int l=1; int h=max(a);
         while(l<=h){
             int mid=(l+h)/2;

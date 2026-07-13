@@ -22,7 +22,7 @@ public class KokoEatingBananas {
         return t;
     }
     public static void main(String[] args) {
-        int[] p={3,6,7,11}; int hr=8; int ans=1;
+        int[] p={3,6,7,11}; int hr=8; int ans=max(p);
         int l=1;int h=max(p);
         while(l<=h){
             int m=(l+h)/2;
