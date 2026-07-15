@@ -16,10 +16,10 @@ public class IntersectionOfSortedArrays {
                 i++;
             }
             else{
-                if(al.size()>0 && al.get(al.size()-1)!=a[i]){
+                if(!al.isEmpty() && al.getLast()!=a[i]){
                     al.add(a[i]);
                 }
-                if(al.size()==0){
+                if(al.isEmpty()){
                     al.add(a[i]);
                 }
                 i++;j++;
