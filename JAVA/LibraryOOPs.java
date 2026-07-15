@@ -13,7 +13,7 @@ class Library{
     void show(){
         for(String b:this.books){
             if(b==null){continue;}
-            System.out.println(b);
+            System.out.print(b+" ");
         }
     }
     void issue(String bk){
