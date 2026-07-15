@@ -13,6 +13,7 @@ public class SearchInRSA {
             if(a[l]==a[m] && a[m]==a[h]){  // for duplicates problem=> shrink search place
                 l++;h--; continue;
             }
+            // checking whether left or right part is sorted one
             if(a[l]<=a[m]){
                 if(a[l]<=x && x<=a[h]){
                     h=m-1;

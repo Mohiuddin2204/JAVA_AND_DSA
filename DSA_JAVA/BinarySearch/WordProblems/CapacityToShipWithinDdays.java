@@ -1,7 +1,7 @@
 package BinarySearch.WordProblems;
 
 public class CapacityToShipWithinDdays {
-    // weights array of each load = 1 2 3 4 5 6 7 8 9 10 , days
+    // weights array of each load = 1 2 3 4 5 6 7 8 9 10 , days=5
     // finding the least capacity to ship all these in given days
     // suppose c=15 => day 1= 1+2+3+4+5 done , day 2= 6+7 , day 3= 8 , d4 =9 , d5= 10 ( done )
     // max can be sum of loads , min is maximum of loads(as to ship everyone)

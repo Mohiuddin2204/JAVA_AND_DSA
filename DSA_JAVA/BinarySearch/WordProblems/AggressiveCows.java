@@ -1,6 +1,6 @@
 package BinarySearch.WordProblems;
 import java.util.Arrays;
-
+//if cows>length of array => not possible case
 public class AggressiveCows {
     // stall coordinates array : 0 3 4 7 9 10 , cows=4
     // place 4 cows such that , min dist between cows is maximum    ( MAX(MIN) )
