@@ -1,7 +1,7 @@
 package BinarySearch;
 
 public class MedianOfTwoSortedArrays {
-    public static int unionSolution(int[] a1,int[] a2,int n1,int n2){
+    public static int mergeSolution(int[] a1,int[] a2,int n1,int n2){
         int i=0; int j=0; int n=n1+n2; int id2= n/2; int id1= id2-1;
         int ct=0; int e1=-1; int e2=-1;
         while(i<n1 && j<n2){
@@ -63,7 +63,7 @@ public class MedianOfTwoSortedArrays {
     public static void main(String[] args) {
         int[] a1={2,3,6,15}; int n1=a1.length;
         int[] a2={1,3,4,7,10,12}; int n2=a2.length;
-        System.out.println(unionSolution(a1,a2,n1,n2));
+        System.out.println(mergeSolution(a1,a2,n1,n2));
         System.out.println(binarySearchSolution(a1,a2,n1,n2));
     }
 }
