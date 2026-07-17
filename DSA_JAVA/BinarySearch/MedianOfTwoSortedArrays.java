@@ -32,10 +32,10 @@ public class MedianOfTwoSortedArrays {
     //SYMMETRY APPROACH => PICKING VALID ELEMENTS ON LEFT SIDE
     // 1 , 3 , 4 , 7 , 10 , 12      2 , 3 , 6 , 15
     // total = 10 => 5 on left
-    // picking 3 on left and 2 on right =>  1 3 4(l1)  |  7(r1) 10 12
+    // picking 3 from a1 and 2 from a2 =>  1 3 4(l1)  |  7(r1) 10 12
     //                                        2 3(l2)  |  6(r2) 15
     // cross compare :  3 < 7 good , 4<6 good , its valid symmetry
-    //median :  largest on left and smallest on right : average
+    //median :  largest on left and smallest on right : (total even)
     // elimination in binary search :  l1>r2 : high eliminated
     // l2>r1 : left eliminated
     public static int binarySearchSolution(int[] a1,int[] a2,int n1,int n2){
