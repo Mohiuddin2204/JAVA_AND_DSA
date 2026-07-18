@@ -14,6 +14,7 @@ public class PeakElementMatrix {
         }
         return id;
     }
+    // TC : O(NlogM)
     public static List<Integer> peakMatrix(int[][] a){
         int n=a.length; int m=a[0].length; //N*M
         List<Integer> al=new ArrayList<>();

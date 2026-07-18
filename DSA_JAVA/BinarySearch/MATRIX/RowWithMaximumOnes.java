@@ -1,6 +1,7 @@
 package BinarySearch.MATRIX;
 
 public class RowWithMaximumOnes {
+    //every row is sorted : first all zeroes then all ones
     //Binary solution will be : each row wise => do lower bound of 1 for each row
     // TC : O(NlogM)
     //Most optimal solution is come from last column with loops : TC : O(M+N)
