@@ -1,4 +1,4 @@
-package Array;
+package SlidingWindow_TwoPointer;
 //ARRAY WITH ONLY POSITIVES
 public class LongestSubarrayWithSumK_Pos {
     public static void main(String[] args) {
