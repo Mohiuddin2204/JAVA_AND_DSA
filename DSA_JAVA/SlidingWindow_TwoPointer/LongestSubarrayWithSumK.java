@@ -10,7 +10,7 @@ public class LongestSubarrayWithSumK {
         HashMap<Integer,Integer> map=new HashMap<>();
         for(int i=0;i<a.length;i++){
             s+=a[i];
-            if(s==i){length=Math.max(length,i+1);}
+            if(s==sum){length=Math.max(length,i+1);}
             int rem=s-sum;
             if(map.containsKey(rem)){
                 int l=i-map.get(rem);
