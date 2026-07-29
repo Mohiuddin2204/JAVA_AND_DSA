@@ -8,7 +8,7 @@ class Game {
 
     public Game() {
         Random r = new Random();
-        this.n = r.nextInt(100);     //[0,99)
+        this.n = r.nextInt(100);     //[0,99]
     }
 
     public int getGuesses() {

@@ -27,7 +27,7 @@ public class CombinationSum2 {
         subseqArray(a, i + 1, l, sum, s);
     }
     public static void main(String[] args) {
-        int[] a = {2,2,2,2,4}; // Input with multiple duplicates
+        int[] a = {2,2,2,2,4,1,1,1,1,3,3}; // Input with multiple duplicates
         int sum = 4;
         // Sorting is mandatory for duplicate skipping logic to work
         Arrays.sort(a);
