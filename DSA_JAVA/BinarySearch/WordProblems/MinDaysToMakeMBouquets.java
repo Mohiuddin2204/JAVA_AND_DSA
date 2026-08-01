@@ -41,13 +41,13 @@ public class MinDaysToMakeMBouquets {
 
     public static void main(String[] args) {
         int[] bloom={7,7,7,7,13,11,12,7}; int m=2; int k=3; int ans=max(bloom);
-        if(m*k > bloom.length){
-            System.out.println("impossible"); return;
-        }
+//        if(m*k > bloom.length){
+//            System.out.println("impossible"); return;
+//        }
         int l=min(bloom); int h=max(bloom);
         while(l<=h){
             int mid=(l+h)/2;
-            if(bouq(bloom,mid,m,k)==true){
+            if(bouq(bloom, mid, m, k)){
                 ans=mid; h=mid-1;
             }
             else{

@@ -19,7 +19,7 @@ public class KthMissingPositiveNumber {
                 h=m-1;
             }
         }
-        return h+1+k;  // h will be pointed at index 3 at last, 3+1+k = answer
+        return h+1+k;  // h will be pointed at index 3 (0 based indexing) at last, 3+1+k = answer
     }
     public static void main(String[] args) {
         int[] a={2,3,4,7,11}; int k=5;

@@ -1,6 +1,7 @@
 package Maths;
 //PRINT ALL PRIME NUMBERS TILL N
 public class SieveOfEratosthenes {
+    //TC : O(NloglogN)
     public static void main(String[] args) {
         int n=30;
         int[] p=new int[n+1];

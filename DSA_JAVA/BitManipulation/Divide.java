@@ -13,7 +13,7 @@ public class Divide {
         if(dividend<0 && divisor>0){
             sign=false;
         }
-        int n=Math.abs(dividend); int d=Math.abs(divisor); int div=Math.abs(divisor);
+        int n=Math.abs(dividend); int d=Math.abs(divisor);
         while(n>=d){
             int c=0;
             while(n >= (d*(1<<(c+1)))){

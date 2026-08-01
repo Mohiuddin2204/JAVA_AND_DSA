@@ -2,7 +2,7 @@ package Recursion;
 
 public class KeypadCombination {
     public static String[] keyp={
-            ".","abc","def","ghi","jkl","mno","pqr","stu","vwx","yz"
+            "","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"
     };
     public static void keypc(String s,int i,String comb){
         if(i==s.length()){
