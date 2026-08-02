@@ -2,8 +2,8 @@ package SlidingWindow_TwoPointer;
 import java.util.HashMap;
 
 public class LongestReptCharReplacement {
-    // can convert any 2 characters with others
-    // return longest repeating character then
+    // can convert any k=2 characters with others
+    // return longest repeating character length then
     // IN AABABBA , here in starting 5 => convert B to A : return 5
     // APPROACH : LENGTH-MAX FREQUENCY <= K
     public static void main(String[] args) {
@@ -13,7 +13,7 @@ public class LongestReptCharReplacement {
         while(r<n){
             map.put(s.charAt(r),map.getOrDefault(s.charAt(r),0)+1);
             mf=Math.max(mf,map.get(s.charAt(r)));
-            if((r-l+1)-mf >k){
+            if((r-l+1)-mf >k){    // KEEPING MAX LENGTH INTACT
                 map.put(s.charAt(l),map.getOrDefault(s.charAt(l),0)-1);
                 l++;
             }

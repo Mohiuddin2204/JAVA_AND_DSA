@@ -34,7 +34,7 @@ public class PalindromePartitioning {
             l.removeLast(); // Backtrack
         }
 
-        // Do NOT Cut here , as it was not palindrome part
+        // Do NOT Cut here , to explore other palindromes(larger size)
         partition(s, i + 1, nextPart, l);
     }
     public static void main(String[] args) {
