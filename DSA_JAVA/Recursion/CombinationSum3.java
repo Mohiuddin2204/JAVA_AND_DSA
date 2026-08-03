@@ -8,7 +8,7 @@ public class CombinationSum3 {
         return result;
     }
     private static void backtrack(int num, int k, int targetSum, int currentSum, List<Integer> currentList, List<List<Integer>> result) {
-        // Pruning as array contains positive numbers
+        // Pruning as array contains positive numbers and want list of exactly k numbers
         if (currentSum > targetSum || currentList.size() > k) {
             return;
         }
