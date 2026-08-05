@@ -28,7 +28,7 @@ public class ReverseDLL {
             l=t.prev;
             t.prev=t.next;
             t.next=l;
-            t=t.prev; 
+            t=t.prev;
         }
         head=l.prev;
         return head;
