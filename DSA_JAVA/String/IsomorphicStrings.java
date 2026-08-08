@@ -4,6 +4,7 @@ import java.util.HashMap;
 public class IsomorphicStrings {
     // Example :  egg = add ( e=a , g=d )
     public static boolean iso(String s1,String s2){
+        if(s1.length()!=s2.length()){return false;}
         HashMap<Character,Character> hm=new HashMap<>();
         for(int i=0;i<s1.length();i++){
             if(hm.containsKey(s1.charAt(i))){

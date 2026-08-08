@@ -1,5 +1,8 @@
 package SlidingWindow_TwoPointer;
 
+// SIMILAR QUES : COUNT NO OF NICE SUBARRAY :
+// [ 1 5 2 1 1] , k=3 , count sub-arrays with k odd numbers => odd=1 , even=0
+// => [1 1 0 1 1] => problem changed to : binary sub array with sum k.
 public class CountBinarySubarraySumK {
     // As there are zeroes we will miss some sub arrays while solving sum=target
     // Approach => (Sum<=Target) - (Sum<=(Target-1))

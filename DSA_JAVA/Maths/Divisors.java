@@ -1,6 +1,6 @@
 package Maths;
 import java.util.*;
-// Time complexity = O(root n)+ O(dlogd) where n=input , d=no of divisors
+// Time complexity = O(root n)+ O(d*log d)+ O(d) where n=input , d=no of divisors
 public class Divisors {
     public static void main(String[] args) {
         int n=36;

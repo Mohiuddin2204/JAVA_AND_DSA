@@ -36,7 +36,9 @@ public class Sort012LL {
             }
             t=t.next;
         }
-        two.next=null; one.next=twoh.next; zero.next=oneh.next;
+        zero.next=((oneh.next)!=null)?oneh.next:twoh.next;
+        one.next=twoh.next;
+        two.next=null;
         head=zeroh.next;
         return head;
     }

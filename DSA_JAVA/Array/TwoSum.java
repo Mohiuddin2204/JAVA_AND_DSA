@@ -14,7 +14,7 @@ public class TwoSum {
                 List<Integer> al=new ArrayList<>();
                 al.add(a[l]);al.add(a[r]);
                 all.add(al);
-                l++;
+                l++; r--;
             }
             else if(sum<k){
                 l++;

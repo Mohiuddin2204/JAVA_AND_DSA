@@ -2,6 +2,8 @@ package String;
 
 public class StringToInteger {
     public static int strToInt(String s){
+        // If string starts with any alphabet , return 0
+        //If string starts with some numbers then return them
         s=s.trim();
         int num=0; char[] c=s.toCharArray();
         if(c.length==0){return 0;}
