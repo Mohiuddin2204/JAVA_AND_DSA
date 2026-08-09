@@ -20,13 +20,13 @@ public class IsPalindrome {
         System.out.println();
     }
     public static Node reverse(Node head){
-        Node p=head; Node c=head.next;
+        if(head==null || head.next==null){return head;}
+        Node p=null; Node c=head;
         while(c!=null){
             Node next=c.next;
             c.next=p;
             p=c; c=next;
         }
-        head.next=null; // AT LAST HEAD IS THE LAST NODE
         head=p; // MAKE PREV NODE AS HEAD , AS C BECAME NULL NOW
         return head;
     }
