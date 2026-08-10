@@ -38,6 +38,7 @@ public class RemoveDuplicatesFromSortedDLL {
         }
         System.out.println();
     }
+    // REMOVE DUPLICATES FROM SORTED DLL
     public static DNode func(DNode head){
         DNode t=head;
         while(t!=null && t.next!=null){
