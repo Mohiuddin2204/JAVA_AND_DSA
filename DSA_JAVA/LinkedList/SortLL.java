@@ -47,6 +47,7 @@ public class SortLL {
         }
         return s;
     }
+    // MERGE SORT ON LL , BREAK LL AT MID , AND DIVIDE TILL SINGLE NODES => THEN MERGE THEM
     public static Node mergesortLL(Node head){
         if(head==null || head.next==null){return head;}
         Node m=mid(head); Node lefth=head; Node righth=m.next;
