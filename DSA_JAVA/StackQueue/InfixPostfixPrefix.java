@@ -55,10 +55,57 @@ public class InfixPostfixPrefix {
         }
         return st.peek();
     }
+    public static String prefixToInfix(String s){
+        char[] c=s.toCharArray(); Stack<String> st=new Stack<>();
+        for(int i=c.length-1;i>=0;i--){
+            char ch=c[i];
+            if(Character.isLetterOrDigit(ch)){st.push(String.valueOf(ch));}
+            else{
+                String ans="";
+                String t1=st.pop(); String t2=st.pop();
+                ans+="("+t1+ch+t2+")";
+                st.push(ans);
+            }
+        }
+        return st.peek();
+    }
+    public static String postfixToPrefix(String s) {
+        char[] c = s.toCharArray();
+        Stack<String> st = new Stack<>();
+        for(int i=0;i<c.length;i++){
+            char ch=c[i];
+            if(Character.isLetterOrDigit(ch)){st.push(String.valueOf(ch));}
+            else{
+                String ans="";
+                String t1=st.pop(); String t2=st.pop();
+                ans+=ch+t2+t1;
+                st.push(ans);
+            }
+    }
+        return st.peek();
+    }
+    public static String prefixToPostfix(String s){
+        char[] c = s.toCharArray();
+        Stack<String> st = new Stack<>();
+        for(int i=c.length-1;i>=0;i--){
+            char ch=c[i];
+            if(Character.isLetterOrDigit(ch)){st.push(String.valueOf(ch));}
+            else{
+                String ans="";
+                String t1=st.pop(); String t2=st.pop();
+                ans+=t1+t2+ch;
+                st.push(ans);
+            }
+        }
+        return st.peek();
+    }
     public static void main(String[] args) {
         hm.put('^',3);hm.put('*',2); hm.put('/',2); hm.put('+',1); hm.put('-',1); hm.put('(',0);
         System.out.println(infixToPostfix("a+b*(x^d-e)"));
         System.out.println(infixToPrefix("(A+B)*C-D+F"));
         System.out.println(postfixToInfix("AB-DE+F*/"));
+        System.out.println(prefixToInfix("*+PQ-MN"));
+        System.out.println(postfixToPrefix("AB-DE+F*/"));
+        System.out.println(prefixToPostfix("/-AB*+DEF"));
     }
 }
