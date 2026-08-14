@@ -1,5 +1,4 @@
 package StackQueue;
-
 import java.util.Stack;
 
 public class SumOfSubarrayMinimums {
@@ -7,10 +6,10 @@ public class SumOfSubarrayMinimums {
         int[] nse=new int[a.length];
         Stack<Integer> st=new Stack<>();
         for(int i=a.length-1;i>=0;i--){
-            while(!st.isEmpty() && a[i]<=st.peek()){st.pop();}
+            while(!st.isEmpty() && a[i]<=a[st.peek()]){st.pop();}
             if(st.isEmpty()){nse[i]=a.length;}
             else{nse[i]=st.peek();}
-            st.push(a[i]);
+            st.push(i);
         }
         return nse;
     }
@@ -20,16 +19,17 @@ public class SumOfSubarrayMinimums {
         Stack<Integer> st=new Stack<>();
         int[] pse =new int[a.length];
         for(int i=0;i<a.length;i++){
-            while(!st.isEmpty() && a[i]<=st.peek()){st.pop();}
+            while(!st.isEmpty() && a[i]<a[st.peek()]){st.pop();}
             if(st.isEmpty()){
                 pse[i]=-1;}
             else{
                 pse[i]=st.peek();}
-            st.push(a[i]);
+            st.push(i);
         }
         return pse;
     }
-    // approach for each index is : left*right*a[i] , left=i-psee , right=nse-i
+    // stack stores indices (not elements) => for our approach :
+    //  for each index is : left*right*a[i] , left=i-psee , right=nse-i
     // left*right gives all sub-arrays with in a[i] is smaller
     public static void main(String[] args) {
         int[] a={3,1,2,4};int n=a.length;

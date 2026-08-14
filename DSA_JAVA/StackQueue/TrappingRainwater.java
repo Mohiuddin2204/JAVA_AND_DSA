@@ -5,7 +5,7 @@ public class TrappingRainwater {
         int[] a={0,1,0,2,1,0,1,3,2,1,2,1};
         // ARRAY CONTAINS HEIGHTS OF BUILDINGS
         // NEED TO CALCULATE AMOUNT OF WATER STORED IN BETWEEN THE BUILDINGS WHEN RAIN FALLS
-        // WILL BE USING THE CONCEPT OF min(left-max,right-max)-a[i]
+        // WILL BE USING THE CONCEPT OF min(leftmax,rightmax)-a[i]
         // two pointer approach l-from start , r-from end
         // It means we need to look at smaller sides only
         // at the end , left and right will be at the max building ( as we are exploring smaller ones first)
