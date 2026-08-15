@@ -41,7 +41,7 @@ public class LargestRectangleInHistogram {
         System.out.println(brute(a));
         // approach :  a[i]*(nse-pse-1)
         // but to reduce complexity => will try to calculate nse , pse in one loop itself
-        // stack take cares of it
+        // stack take cares of it : ensuring increasing order (so that nse of prev is current)
         Stack<Integer> st=new Stack<>();
         int A=0;
         for(int i=0;i<a.length;i++){

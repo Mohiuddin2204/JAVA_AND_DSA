@@ -23,7 +23,7 @@ public class AsteroidCollision {
                 } // POP IF BOTH ARE EQUAL
                 else if(st.isEmpty() || st.peek()<0){
                     st.push(a[i]);
-                } // IF STACK GOT ELEMENT => AND NEGATIVE ONES LEFT -> PUSH THEM
+                } // IF STACK GOT Empty => AND NEGATIVE ONES LEFT -> PUSH THEM
             }
         }
         while (!st.isEmpty()){
