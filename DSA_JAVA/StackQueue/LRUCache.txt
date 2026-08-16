@@ -1,0 +1,69 @@
+Data structure that follows the constraints of a Least Recently Used (LRU) cache.
+
+LRU cache with positive size capacity.
+int get(int key) : value of the key if the key exists, otherwise return -1.
+void put(int key, int value) Update the value of the key if the key exists. Otherwise, add the key-value pair to the cache.
+                             If the number of keys exceeds the capacity from this operation, evict the least recently used key.
+The functions get and put must each run in O(1) average time complexity.
+
+SOLUTION :
+APPROACH OF DLL (IMPLEMENTING FROM SCRATCH) + MAP =>
+Node head = new Node(0, 0), tail = new Node(0, 0);
+    Map < Integer, Node > map = new HashMap();
+    int capacity;
+
+    public LRUCache(int _capacity) {
+        capacity = _capacity;
+        head.next = tail;
+        tail.prev = head;
+    }
+
+keep a dummy head and tail nodes for smooth insertion and removal ,
+Map consists <key,Node> => for directing to the node easily during get(int key) , remove(Node n) , put(int key)
+
+DLL :
+class Node {
+        Node prev, next;
+        int key, value;
+        Node(int _key, int _value) {
+            key = _key;
+            value = _value;
+        }
+    }
+private void remove(Node node) {
+        map.remove(node.key);
+        node.prev.next = node.next;
+        node.next.prev = node.prev;
+    }
+// we will remove the node present at tail ( as it will be LRU )
+    private void insert(Node node) {
+        map.put(node.key, node);
+        node.next = head.next;
+        node.next.prev = node;
+        head.next = node;
+        node.prev = head;
+    }
+// we will insert new node at head or if any node got (get) call -> inserted at head
+
+public void put(int key, int value) {
+        if (map.containsKey(key)) {
+            remove(map.get(key));
+        }
+        if (map.size() == capacity) {
+            remove(tail.prev);
+        }
+        insert(new Node(key, value));
+    }
+// if map contains key -> remove that key -> and insert same key with updated value at head
+// if map is full , remove tail and insert at head ( as capacity was full )
+public int get(int key) {
+        if (map.containsKey(key)) {
+            Node node = map.get(key);
+            remove(node);
+            insert(node);
+            return node.value;
+        } else {
+            return -1;
+        }
+    }
+//if it is successful search : remove that node and insert it again at head => as it is recently used
