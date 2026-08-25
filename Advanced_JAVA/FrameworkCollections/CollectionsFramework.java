@@ -28,7 +28,7 @@ public class CollectionsFramework {
         LinkedList<Integer> ll=new LinkedList<>();
         ll.add(2);ll.add(3);ll.add(4);
         ll.add(1,4); //inserting
-        ll.get(2);//2 is index
+        ll.get(2);//2 is the index
         //ll.remove(2); 2 is index
         //ll.clear();
         System.out.println(ll.size());

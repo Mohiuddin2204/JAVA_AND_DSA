@@ -1,7 +1,7 @@
 package Advanced;
 /**
  * This is java doc demonstration
- * This is <i>itlaic</i>
+ * This is <i>italic</i>
  * word <p>paragraph</p>
  * @author Mohiuddin
  * @version 0.1
