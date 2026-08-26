@@ -1,12 +1,6 @@
 package Tree;
 import java.util.*;
-class Pair{
-    TNode t;
-    int num;
-    Pair(TNode t,int num){
-        this.t=t; this.num=num;
-    }
-}
+
 public class Traversals {
     public static int i=-1;
     public static TNode buildTree(int a[]){
@@ -61,6 +55,7 @@ public class Traversals {
         inOrder(root);System.out.println();
         postOrder(root);System.out.println();
         System.out.println(levelOrder(root));
+
         // PREORDER , POSTORDER , INORDER IN ONE TRAVERSAL
         List<Integer> preorder=new ArrayList<>();
         List<Integer> inorder=new ArrayList<>();
@@ -70,7 +65,7 @@ public class Traversals {
         st.push(new Pair(root,1));
         // num=1 > preorder -> then go for left , num++
         // num=2 -> inorder -> then for go for right , num++
-        // num=3 -> postorder -> just print it
+        // num=3 -> postorder
         while(!st.isEmpty()){
             Pair it=st.pop();
             if(it.num==1){
