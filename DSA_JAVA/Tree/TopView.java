@@ -23,7 +23,7 @@ public class TopView {
                                      6
                         LINE     -2 -1  0  1  2
         */
-        // TOP VIEW : 4 2 1 3 7   ( can return in any order )
+        // TOP VIEW : 4 2 1 3 7
         // using level order traversal and line concept
         // adding the first element of every line ( top view )
         List<Integer> l=new ArrayList<>();

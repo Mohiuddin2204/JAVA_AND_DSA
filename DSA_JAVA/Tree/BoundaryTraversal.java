@@ -62,7 +62,7 @@ public class BoundaryTraversal {
                                      2   3
                                    4  5 6  7
         */
-        // Boundary traversal will be : 1 2 4 5 6 7 3 1
+        // Boundary traversal will be : 1 2 4 5 6 7 3
         System.out.println(bt(root));
     }
 }

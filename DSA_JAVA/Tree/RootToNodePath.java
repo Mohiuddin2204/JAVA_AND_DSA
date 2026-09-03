@@ -38,7 +38,7 @@ public class RootToNodePath {
                                      2   3
                                    4  5 6  7
         */
-        // Path from Node 1 to Node 7 is : 1 3 7
+        // Path from Root = 1 to Node with data = 7 is : 1 3 7
         System.out.println(rootTonode(root,7));
     }
 }
