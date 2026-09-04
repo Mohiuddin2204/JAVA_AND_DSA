@@ -37,11 +37,11 @@ public class ChildrenSumProperty {
         if(root.l!=null || root.r!=null){root.data=total;}
     }
     public static void main(String[] args) {
-        int[] a={40,10,2,-1,-1,5,-1,-1,20,30,-1,-1,40,-1,-1};
+        int[] a={2,35,2,-1,-1,3,-1,-1,10,5,-1,-1,2,-1,-1};
         TNode root=buildTree(a);
-        /* TREE STRUCTURE IS LIKE :    40
-                                     10   20
-                                   2  5 30  40
+        /* TREE STRUCTURE IS LIKE :     2
+                                     35   10
+                                   2  3  5  2
         */
         preOrder(root);
         System.out.println();
